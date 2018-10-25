@@ -1,6 +1,6 @@
 # ServerAppConfiguration
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.3.
+Sample Application for Server App configuration developed using Angular6, Bootstrap, Angular flex-layout and Angular animation.
 
 ## Development server
 
