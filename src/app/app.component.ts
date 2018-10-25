@@ -1,12 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { SeversAndAppsService } from './severs-and-apps.service';
 import { trigger, style, state, transition, animate, keyframes, query, stagger } from '@angular/animations';
+import { ToastrService } from 'ngx-toastr';
+
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+
   title = 'server-app-configuration';
 
   App1count = 1;
@@ -18,7 +22,7 @@ export class AppComponent implements OnInit {
   applications = [];
   servers = [];
 
-  constructor( private seversAndAppsService: SeversAndAppsService) {}
+  constructor( private seversAndAppsService: SeversAndAppsService, private toastrService: ToastrService) {}
 
   ngOnInit() {
     this.applications = this.seversAndAppsService.getApplications();
@@ -26,6 +30,7 @@ export class AppComponent implements OnInit {
   }
 
   incrementServers() {
+    this.toastrService.success('New Server Instance has been added');
     this.servers.push( {id: this.servers.length + 1, apps: [undefined, undefined]});
 
   }
@@ -69,6 +74,7 @@ export class AppComponent implements OnInit {
         this.App5count--;
     }
     this.servers.pop();
+    this.toastrService.error('Destroyed Server Instance');
   }
   }
 
@@ -80,18 +86,23 @@ export class AppComponent implements OnInit {
           if (app === this.applications[0] && this.App1count <= 2) {
             this.App1count++;
             value.apps[0] = app;
+            this.toastrService.success('App has has been added to server');
           } else if (app === this.applications[1] && this.App2count <= 2) {
             this.App2count++;
             value.apps[0] = app;
+            this.toastrService.success('App has has been added to server');
           } else if (app === this.applications[2] && this.App3count <= 2) {
             this.App3count++;
             value.apps[0] = app;
+            this.toastrService.success('App has has been added to server');
           } else if (app === this.applications[3] && this.App4count <= 2) {
             this.App4count++;
             value.apps[0] = app;
+            this.toastrService.success('App has has been added to server');
           } else if (app === this.applications[4] && this.App5count <= 2) {
             this.App5count++;
             value.apps[0] = app;
+            this.toastrService.success('App has has been added to server');
           }
 
           break;
@@ -103,18 +114,23 @@ export class AppComponent implements OnInit {
                 if (app === this.applications[0] && this.App1count <= 2) {
                   this.App1count++;
                   value2.apps[1] = app;
+                  this.toastrService.success('App has has been added to server');
                 } else if (app === this.applications[1] && this.App2count <= 2) {
                   this.App2count++;
                   value2.apps[1] = app;
+                  this.toastrService.success('App has has been added to server');
                 } else if (app === this.applications[2] && this.App3count <= 2) {
                   this.App3count++;
                   value2.apps[1] = app;
+                  this.toastrService.success('App has has been added to server');
                 } else if (app === this.applications[3] && this.App4count <= 2) {
                   this.App4count++;
                   value2.apps[1] = app;
+                  this.toastrService.success('App has has been added to server');
                 } else if (app === this.applications[4] && this.App5count <= 2) {
                   this.App5count++;
                   value2.apps[1] = app;
+                  this.toastrService.success('App has has been added to server');
                 }
 
                 break;
@@ -135,11 +151,13 @@ export class AppComponent implements OnInit {
 
       if (value.apps[1] === app) {
         value.apps[1] = undefined;
+        this.toastrService.error('App has has been removed from server');
         break;
       }
 
       if (value.apps[0] === app) {
         value.apps[0] = undefined;
+        this.toastrService.error('App has has been removed from server');
         break;
       }
 

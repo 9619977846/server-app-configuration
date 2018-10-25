@@ -8,6 +8,8 @@ import { ServerListComponent } from './server-list/server-list.component';
 import { SeversAndAppsService } from './severs-and-apps.service';
 import { ApplicationComponent } from './application/application.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     FlexLayoutModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
   ],
   providers: [SeversAndAppsService],
   bootstrap: [AppComponent]
