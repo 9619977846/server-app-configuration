@@ -1,0 +1,27 @@
+
+  :host {
+    display: block;
+    padding: 32px;
+    border: 1px solid black;
+    border-radius: 8px;
+  }
+
+  .Hadoop-App{
+    color: rgb(0, 128, 0);
+    }
+
+  .Rails-App{
+    color: rgb(50, 89, 218);
+    }
+
+  .Chronos-App{
+    color: rgb(224, 22, 197);
+    }
+
+  .Storm-App{
+    color: rgb(194, 232, 7)
+    }
+
+  .Spark-App{
+    color: rgb(221, 14, 59);
+    }

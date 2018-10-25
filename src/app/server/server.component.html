@@ -1,0 +1,5 @@
+<div *ngIf=value>
+<div *ngIf=value.apps[0] class="{{value.apps[0]}}-App">{{ (value && value.apps[0]) ? value.apps[0] : ''}}</div>
+<br/>
+<div *ngIf=value.apps[1] class="{{value.apps[1]}}-App">{{ (value && value.apps[1]) ? value.apps[1] : ''}} </div>
+  </div>

@@ -1,0 +1,30 @@
+
+.Hadoop-heading{
+  font-size: 21px;
+  color: rgb(0, 128, 0);
+  padding: 10px;
+  }
+
+  .Rails-heading{
+    font-size: 21px;
+    color: rgb(50, 89, 218);
+    padding: 10px;
+    }
+
+  .Chronos-heading{
+    font-size: 21px;
+    color: rgb(224, 22, 197);
+    padding: 10px;
+    }
+
+  .Storm-heading{
+    font-size: 21px;
+    color: rgb(194, 232, 7);
+    padding: 10px;
+    }
+
+  .Spark-heading{
+    font-size: 21px;
+    color: rgb(221, 14, 59);
+    padding: 10px;
+    }
