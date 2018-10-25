@@ -1,6 +1,6 @@
 # ServerAppConfiguration
 
-Sample Application for Server App configuration developed using Angular6, Bootstrap, Angular flex-layout and Angular animation.
+Sample Application for Server App configuration developed using Angular6, Bootstrap, Angular flex-layout, Angular toaster and Angular animation.
 
 ## Development server
 
